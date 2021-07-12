@@ -1,0 +1,25 @@
+{
+  "srcField": {
+    "ui:options": { "inline": true, "width": "50%"},
+    "ui:placeholder": "Source field name",
+    "ui:emptyValue": ""
+  },
+  "dstField": {
+    "ui:options": { "inline": true, "width": "50%"},
+    "ui:placeholder": "Destination field name"
+  },
+  "jsonPathExpr": {
+    "ui:placeholder": "Enter JSONPath expression"
+  },
+  "ui:options": {
+    "groups": {
+      "advanced": {
+        "title": "Advanced Settings",
+        "collapsed": true,
+        "properties": [
+          "overwrite"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "jsonpath",
+  "version": "0.1.0",
+  "description": "Query events with JSONPath expressions",
+  "main": "index.js",
+  "author": "Brendan Dalpe (bdalpe@cribl.io)",
+  "license": "MIT",
+  "dependencies": {
+    "jsonpath-plus": "^6.0.1"
+  },
+  "devDependencies": {}
+}

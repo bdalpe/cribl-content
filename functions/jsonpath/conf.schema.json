@@ -1,0 +1,30 @@
+{
+  "title": "",
+  "type": "object",
+  "required": ["srcField", "dstField", "jsonPathExpr"],
+  "properties": {
+    "srcField": {
+      "title": "Source Field",
+      "description": "Field which contains the source JSON object/string.",
+      "type": "string",
+      "default": "_raw"
+    },
+    "dstField": {
+      "title": "Destination Field",
+      "description": "Field name where to JSONPath extraction results will be placed.",
+      "type": "string"
+    },
+    "jsonPathExpr": {
+      "title": "JSONPath Expression",
+      "description": "JSONPath grammar used the extract the data from the source JSON object/string.",
+      "type": "string"
+    },
+    "overwrite": {
+      "type": "boolean",
+      "title": "Overwrite Existing Fields",
+      "description": "Overwrite existing event fields with extracted values. If set to No, existing fields will be converted to an array.",
+      "default": false
+    }
+  },
+  "dependencies": {}
+}
