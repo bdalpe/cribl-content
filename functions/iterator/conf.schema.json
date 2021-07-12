@@ -1,0 +1,59 @@
+{
+  "title": "",
+  "type": "object",
+  "required": ["type", "srcField", "func"],
+  "properties": {
+    "type": {
+      "title": "Operation Mode",
+      "type": "string",
+      "description": "Select operation mode. Map / For Each modifies elements in place, Reduce and Reduce Right accumulate values and create a new result.",
+      "enum": ["map", "reduce", "reduceRight"],
+      "enumNames": ["Map / For Each", "Reduce", "Reduce Right"],
+      "default": "map"
+    },
+    "srcField": {
+      "title": "Source Field",
+      "description": "Field which contains the array to be iterated over.",
+      "type": "string",
+      "default": "_raw"
+    },
+    "dstField": {
+      "title": "Destination Field",
+      "description": "Field name where the results of the iteration will be place.",
+      "type": "string"
+    },
+    "initialValue": {},
+    "func": {
+      "title": "Iterator Function",
+      "description": "Expression evaluated against {element, index, arr} context. Reduce and Reduce Right modes add and additional {accumulator} field to the evaluation context. Example: element.trim() removes whitespace from each array element.",
+      "type": "string",
+      "jsExpression": true
+    }
+  },
+  "dependencies": {
+    "type": {
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "enum": ["map"]
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "enum": ["reduce", "reduceRight"]
+            },
+            "initialValue": {
+              "title": "Accumulator Initial Value",
+              "description": "Optional JavaScript expression whose returned value will be used as the accumulator's initial value. Expression is evaluated against {event} context. You can access event fields' values via event.<fieldName>.",
+              "type": "string",
+              "jsExpression": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": {
+    "ui:options": {"inline": true, "width": "25%"}
+  },
+  "srcField": {
+    "ui:options": { "inline": true, "width": "37.5%"},
+    "ui:placeholder": "Source field name"
+  },
+  "dstField": {
+    "ui:options": { "inline": true, "width": "37.5%"},
+    "ui:placeholder": "Destination field name"
+  },
+  "initialValue": {
+    "ui:placeholder": "Initial accumulator value"
+  },
+  "func": {
+    "ui:widget": "JsInput",
+    "ui:options": {
+      "editMode": "eager",
+      "autoheight": true
+    },
+    "ui:placeholder": "Enter JavaScript code"
+  }
+}
