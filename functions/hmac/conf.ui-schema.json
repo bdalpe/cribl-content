@@ -1,0 +1,17 @@
+{
+  "hashalg": {
+    "ui:options": { "inline": true, "width": "25%" }
+  },
+  "secret": {
+    "ui:options": { "inline": true, "width": "75%" },
+    "ui:placeholder": "HMAC hash secret value"
+  },
+  "srcField": {
+    "ui:options": { "inline": true, "width": "50%", "inlineStyle": { "padding": "0" } },
+    "ui:placeholder": "Source field name"
+  },
+  "dstField": {
+    "ui:options": { "inline": true, "width": "50%" },
+    "ui:placeholder": "Destination field name"
+  }
+}

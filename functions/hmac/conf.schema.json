@@ -1,0 +1,31 @@
+{
+  "title": "",
+  "type": "object",
+  "required": ["hashalg", "srcField", "dstField", "secret"],
+  "properties": {
+    "hashalg": {
+      "title": "Hash Algorithm",
+      "type": "string",
+      "description": "HMAC will be calculated with this algorithm.",
+      "enum": ["sha256", "sha1"],
+      "enumNames": ["SHA256", "SHA1"],
+      "default": "sha256"
+    },
+    "secret": {
+      "title": "HMAC secret",
+      "description": "The secret to be used in the HMAC hash calculation.",
+      "type": "string"
+    },
+    "srcField": {
+      "title": "Source Field",
+      "description": "Field which contains the data to be hashed.",
+      "type": "string",
+      "default": "_raw"
+    },
+    "dstField": {
+      "title": "Destination Field",
+      "description": "Field name where the results will be placed.",
+      "type": "string"
+    }
+  }
+}
