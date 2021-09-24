@@ -1,0 +1,27 @@
+{
+  "title": "",
+  "type": "object",
+  "required": ["mode", "srcField"],
+  "properties": {
+    "mode": {
+      "title": "Operation Mode",
+      "type": "string",
+      "description": "Should the data be encoded or decoded?",
+      "enum": ["encode", "decode"],
+      "enumNames": ["Encode", "Decode"],
+      "default": "decode"
+    },
+    "srcField": {
+      "title": "Source Field",
+      "description": "Field which contains the source data to be encoded or decoded.",
+      "type": "string",
+      "default": "_raw"
+    },
+    "dstField": {
+      "title": "Destination Field",
+      "description": "Field name where to encoded or decoded data will be placed.",
+      "type": "string"
+    }
+  },
+  "dependencies": {}
+}

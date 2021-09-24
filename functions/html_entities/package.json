@@ -1,0 +1,12 @@
+{
+  "name": "html_entities",
+  "version": "0.1.0",
+  "description": "HTML Entity Encoding/Decoding",
+  "main": "index.js",
+  "author": "Brendan Dalpe (bdalpe@cribl.io)",
+  "license": "MIT",
+  "dependencies": {
+    "he": "^1.2.0"
+  },
+  "devDependencies": {}
+}
