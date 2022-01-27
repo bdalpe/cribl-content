@@ -1,0 +1,13 @@
+{
+  "title": "",
+  "type": "object",
+  "required": ["dstField"],
+  "properties": {
+    "dstField": {
+      "title": "Destination Field",
+      "description": "Field name where the results will be placed.",
+      "type": "string",
+      "default": "uuid"
+    }
+  }
+}
