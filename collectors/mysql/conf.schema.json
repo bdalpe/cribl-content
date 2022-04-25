@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "title": "",
+  "required": ["query", "server", "database", "authType"],
+  "properties": {
+    "query": {
+      "type": "string",
+      "title": "Query",
+      "minLength": 1,
+      "description": "SQL Query statement to collect rows from the database.",
+      "jsExpression": true
+    },
+    "server": {
+      "type": "string",
+      "title": "Address",
+      "minLength": 1,
+      "description": "The FQDN or IP address of the MySQL Server."
+    },
+    "database": {
+      "type": "string",
+      "title": "Database",
+      "minLength": 1,
+      "description": "The MySQL Database to query."
+    },
+    "authType": {
+      "type": "string",
+      "title": "Authentication",
+      "enum": ["none", "basic"],
+      "enumNames": ["None", "Basic"],
+      "default": "none",
+      "description": "Authentication method for the MySQL Server."
+    }
+  },
+  "dependencies": {
+    "authType": {
+      "oneOf": [
+        {
+          "required": ["username", "password"],
+          "properties": {
+            "authType": {"enum": ["basic"]},
+            "username": {
+              "type": "string",
+              "title": "Username",
+              "minLength": 1,
+              "description": "Username for the MySQL Server."
+            },
+            "password": {
+              "type": "string",
+              "title": "Password",
+              "minLength": 1,
+              "description": "Password for the MySQL Server.",
+              "encrypt": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}

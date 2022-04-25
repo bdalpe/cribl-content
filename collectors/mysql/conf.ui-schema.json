@@ -1,0 +1,14 @@
+{
+  "query": {
+    "ui:widget": "JsInput",
+    "ui:options": {
+      "numLines": 5,
+      "editMode": "eager",
+      "autoheight": true
+    },
+    "ui:placeholder": "SELECT * FROM ..."
+  },
+  "server": {
+    "ui:placeholder": "Enter server FQDN/IP"
+  }
+}
