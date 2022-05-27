@@ -1,0 +1,31 @@
+{
+  "name": "cribl-content",
+  "version": "1.0.0",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "recursive-install": "^1.4.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "scripts": {
+    "clean": "npm run delete:nodemodules && npm run delete:dist",
+    "delete:dist": "rm -rf dist/",
+    "delete:nodemodules": "find . -type d -name node_modules -not -path \"./node_modules/*\" -not -path \"./node_modules\" -maxdepth 3 -exec rm -rf '{}' \\;\n",
+    "build": "npm run install:distrecursive && npm run build:webpack",
+    "build:webpack": "webpack --config webpack.config.js",
+    "install:recursive": "node node_modules/recursive-install/recursive-install.js --skip-root",
+    "install:distrecursive": " node node_modules/recursive-install/recursive-install.js --skip-root --omit=dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdalpe/cribl-content.git"
+  },
+  "author": "Brendan Dalpe (bdalpe@cribl.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdalpe/cribl-content/issues"
+  },
+  "homepage": "https://github.com/bdalpe/cribl-content#readme"
+}
