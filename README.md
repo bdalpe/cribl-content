@@ -1,25 +1,33 @@
 # Cribl Content
 
-## Functions
+## Cribl Stream Content
 
-### Array Iterator
+### Collectors
 
-Iterates over an array of values. Implements the following functions: `map` (by extension `forEach`), `reduce`, and `reduceRight`.
+* [MySQL](collectors/mysql/README.md)
+* [Microsoft SQL](collectors/mssql/README.md)
 
-### JSONPath
+### Functions
 
-Extracts data from a JSON object or string using the [JSONPath grammar](https://goessner.net/articles/JsonPath/).
+* [Array Iterator](functions/iterator/README.md) (obsolete - use the Code function starting in version 3.1)
+* [JSONPath](functions/jsonpath/README.md)
+* [HMAC Hashing](functions/hmac/README.md) (obsolete - added in version 3.1.2)
+* [HTML Entities](functions/html_entities/README.md)
+* [GUID/UUID Generator](functions/guid/README.md) 
 
-### HMAC Hashing
+## Building Content
 
-Generates a HMAC hash based on the provided secret. Allows for cryptographic verification of data.
+This project uses Webpack to compile the `node_modules` and Cribl code into a single `index.js` file. To compile, run the following commands:
 
-### HTML Entities
+```bash
+npm install
+npm run build
+```
 
-Decodes text like `&lt;` or `&copy;` into their respective symbols like `<` or `©`.
+This will run `npm install` in all subdirectories and then package each item into the `dist` folder.
 
-Can also encode text into HTML entities.
+To run subsequent builds, you can execute:
 
-### GUID/UUID Generator
-
-Generates a new UUID v4.
+```bash
+npm run build:webpack
+```
