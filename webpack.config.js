@@ -48,6 +48,10 @@ module.exports = {
                 {
                     from: './*/*/conf.*.json',
                     to: './'
+                },
+                {
+                    from: './*/*/*.md',
+                    to: './'
                 }
             ]
         }),
