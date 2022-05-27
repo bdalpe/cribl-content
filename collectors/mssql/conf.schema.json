@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "title": "",
+  "required": ["query", "connectionStringType"],
+  "properties": {
+    "query": {
+      "type": "string",
+      "title": "Query",
+      "minLength": 1,
+      "description": "SQL Query statement to collect rows from the database.",
+      "jsExpression": true
+    },
+    "connectionStringType": {
+      "type": "string",
+      "title": "Connection String Type",
+      "default": "manual",
+      "enum": ["manual", "secret"],
+      "enumNames": ["Manual", "Secret"]
+    }
+  },
+  "dependencies": {
+    "connectionStringType": {
+      "oneOf": [
+        {
+          "required": ["connectionString"],
+          "properties": {
+            "connectionStringType": {"enum": ["manual"]},
+            "connectionString": {
+              "type": "string",
+              "title": "Connection String",
+              "minLength": 1,
+              "description": "Connection string from the SQL server",
+              "encrypt": true
+            }
+          }
+        },
+        {
+          "required": ["connectionStringSecret"],
+          "properties": {
+            "connectionStringType": {"enum": ["secret"]},
+            "connectionStringSecret": {
+              "type": "string",
+              "title": "Secret",
+              "description": "Secret that references connection string",
+              "secret": {
+                "type": "text",
+                "target": [
+                  "textPassword"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

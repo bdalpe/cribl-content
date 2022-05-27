@@ -1,0 +1,12 @@
+{
+  "name": "cribl-mssql-collector",
+  "version": "0.1.0",
+  "description": "Microsoft SQL Custom Collector for Cribl Stream",
+  "main": "index.js",
+  "author": "Brendan Dalpe (bdalpe@cribl.io)",
+  "license": "MIT",
+  "dependencies": {
+    "csv-stringify": "^6.1.0",
+    "mssql": "^8.1.1"
+  }
+}
