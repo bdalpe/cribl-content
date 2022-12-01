@@ -1,0 +1,34 @@
+{
+  "query": {
+    "ui:widget": "JsInput",
+    "ui:options": {
+      "numLines": 5,
+      "editMode": "eager",
+      "autoheight": true
+    },
+    "ui:placeholder": "SELECT * FROM ..."
+  },
+  "connectionStringType": {
+    "ui:widget": "Radio",
+    "ui:options": {
+      "uiEnumOptions": [
+        { "value": "manual", "label": "Manual", "description": "Provide the PostgreSQL connection string below" },
+        { "value": "secret", "label": "Secret", "description": "Select a Secret that references the PostgreSQL connection string" }
+      ],
+      "toggle": true
+    }
+  },
+  "connectionStringSecret": {
+    "ui:widget": "ApiLookupWithCreate",
+    "ui:options": {
+      "url": "/system/secrets?type=text",
+      "createUrl": "/settings/secrets",
+      "valueProp": "id",
+      "createType": "secret",
+      "secretType": "text",
+      "createUiSchema": {
+        "secretType": { "ui:disabled": true }
+      }
+    }
+  }
+}

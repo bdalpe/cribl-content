@@ -1,0 +1,13 @@
+{
+  "name": "cribl-postgresql-collector",
+  "version": "0.1.0",
+  "description": "PostgreSQL Custom Collector for Cribl Stream",
+  "main": "index.js",
+  "author": "Brendan Dalpe (bdalpe@cribl.io)",
+  "license": "MIT",
+  "dependencies": {
+    "csv-stringify": "^6.2.3",
+    "pg": "^8.8.0",
+    "pg-query-stream": "^4.2.4"
+  }
+}
