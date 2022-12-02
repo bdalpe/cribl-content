@@ -6,6 +6,7 @@
 
 * [MySQL](collectors/mysql/README.md)
 * [Microsoft SQL](collectors/mssql/README.md)
+* [PostgreSQL](collectors/postgresql/README.md)
 
 ### Functions
 
