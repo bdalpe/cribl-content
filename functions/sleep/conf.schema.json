@@ -1,0 +1,14 @@
+{
+  "title": "",
+  "type": "object",
+  "required": ["time"],
+  "properties": {
+    "time": {
+      "title": "Sleep time",
+      "description": "Duration in milliseconds to sleep.",
+      "type": "number",
+      "default": 0
+    }
+  },
+  "dependencies": {}
+}

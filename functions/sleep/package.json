@@ -1,0 +1,10 @@
+{
+  "name": "sleep",
+  "version": "0.1.0",
+  "description": "Simulates delay in a pipeline processing data",
+  "main": "index.js",
+  "author": "Brendan Dalpe (bdalpe@cribl.io)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
