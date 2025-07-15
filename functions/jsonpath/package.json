@@ -6,7 +6,7 @@
   "author": "Brendan Dalpe (bdalpe@cribl.io)",
   "license": "MIT",
   "dependencies": {
-    "jsonpath-plus": "^6.0.1"
+    "jsonpath-plus": "^10.3.0"
   },
   "devDependencies": {}
 }
