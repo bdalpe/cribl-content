@@ -6,7 +6,7 @@
   "author": "Brendan Dalpe (bdalpe@cribl.io)",
   "license": "MIT",
   "dependencies": {
-    "uuid": "^8.3.2"
+    "uuid": "^14.0.2"
   },
   "devDependencies": {}
 }
